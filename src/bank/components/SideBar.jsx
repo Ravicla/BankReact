@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import { Navbar, Nav } from 'react-bootstrap';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCalendarAlt, faChartArea, faChartLine, faCog, faCoins, faFileAlt, faFolder, faHandHoldingUsd, faHome, faLaughWink, faMoneyBillWave, faPercentage, faTable, faTachometerAlt, faWrench, faChevronLeft, faChevronRight } from '@fortawesome/free-solid-svg-icons';
 
