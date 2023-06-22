@@ -11,22 +11,22 @@ export const Lista = () => {
           className="fas fa-download fa-sm text-white-50"></i> Generate Report</a>
       </div>
       <p className="mb-4">
-        DataTables se visit t
+        Datos de todos los usuarios
       </p>
 
-
-
+      {/* Content Row */}
       <div className="row">
 
-        <div className="col-xl-12 col-lg-3">
+        <div className="col-lg-12 mb-4">
+
+          {/* Illustrations */}
           <div className="card shadow mb-4">
-            <div
-              className="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+            <div className="card-header py-3">
               <h6 className="m-0 font-weight-bold text-primary">Lista de Usuarios</h6>
             </div>
             <div className="card-body">
-              <div className="table-responsive">
-                <table className="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+              
+              <table className="table table-bordered mb-4" id="dataTable" width="100%" cellspacing="0">
                   <thead>
                     <tr>
                       <th>Name</th>
@@ -57,6 +57,54 @@ export const Lista = () => {
                       <td>$320,800</td>
                     </tr>
                     <tr>
+                      <td>Tiger Nixon</td>
+                      <td>System Architect</td>
+                      <td>Edinburgh</td>
+                      <td>61</td>
+                      <td>2011/04/25</td>
+                      <td>$320,800</td>
+                    </tr>
+                    <tr>
+                      <td>Tiger Nixon</td>
+                      <td>System Architect</td>
+                      <td>Edinburgh</td>
+                      <td>61</td>
+                      <td>2011/04/25</td>
+                      <td>$320,800</td>
+                    </tr>
+                    <tr>
+                      <td>Tiger Nixon</td>
+                      <td>System Architect</td>
+                      <td>Edinburgh</td>
+                      <td>61</td>
+                      <td>2011/04/25</td>
+                      <td>$320,800</td>
+                    </tr>
+                    <tr>
+                      <td>Tiger Nixon</td>
+                      <td>System Architect</td>
+                      <td>Edinburgh</td>
+                      <td>61</td>
+                      <td>2011/04/25</td>
+                      <td>$320,800</td>
+                    </tr>
+                    <tr>
+                      <td>Tiger Nixon</td>
+                      <td>System Architect</td>
+                      <td>Edinburgh</td>
+                      <td>61</td>
+                      <td>2011/04/25</td>
+                      <td>$320,800</td>
+                    </tr>
+                    <tr>
+                      <td>Tiger Nixon</td>
+                      <td>System Architect</td>
+                      <td>Edinburgh</td>
+                      <td>61</td>
+                      <td>2011/04/25</td>
+                      <td>$320,800</td>
+                    </tr>
+                    <tr>
                       <td>Michael Bruce</td>
                       <td>Javascript Developer</td>
                       <td>Singapore</td>
@@ -73,42 +121,12 @@ export const Lista = () => {
                       <td>$112,000</td>
                     </tr>
                   </tbody>
-                </table>
-              </div>
-            </div>
-
-          </div>
-        </div>
-
-
-
-
-
-
-        
-      </div>
-
-      {/* Content Row */}
-      <div className="row">
-
-        <div className="col-lg-12 mb-4">
-
-          {/* Illustrations */}
-          <div className="card shadow mb-4">
-            <div className="card-header py-3">
-              <h6 className="m-0 font-weight-bold text-primary">Illustrations</h6>
-            </div>
-            <div className="card-body">
-              <div className="text-center">
-                <img className="img-fluid px-3 px-sm-4 mt-3 mb-4" style={{ width: '25rem' }}
-                  src="/src/assets/img/undraw_posting_photo.svg" alt="..." />
-              </div>
-              <p>Add some quality, svg illustrations to your project courtesy of <a
-                target="_blank" rel="nofollow" href="https://undraw.co/">unDraw</a>, a
-                constantly updated collection of beautiful svg images that you can use
-                completely free and without attribution!</p>
-              <a target="_blank" rel="nofollow" href="https://undraw.co/">Browse Illustrations on
-                unDraw &rarr;</a>
+              </table>
+              
+              <p>Aqui van los botones de paginacion <hr/>
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Est iure cum, esse aut velit ex rerum laudantium corrupti. Autem a illum et ab nulla ad, suscipit earum maxime laudantium quasi!
+              </p>
+              
             </div>
           </div>
 

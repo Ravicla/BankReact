@@ -10,18 +10,30 @@ export const TopBar = ({ isSidebarOpen, setIsSidebarOpen }) => {
 
   const toggleSearch = () => {
     setIsSearchExpanded(prevState => !prevState);
+    setIsNotificationsOpen(false);
+    setIsMessagesOpen(false);
+    setIsUserOpen(false);
   };
 
   const toggleNotifications = () => {
     setIsNotificationsOpen(prevState => !prevState);
+    setIsSearchExpanded(false);
+    setIsMessagesOpen(false);
+    setIsUserOpen(false);
   };
 
   const toggleMessages = () => {
     setIsMessagesOpen(prevState => !prevState);
+    setIsSearchExpanded(false);
+    setIsNotificationsOpen(false);
+    setIsUserOpen(false);
   };
 
   const toggleUser = () => {
     setIsUserOpen(prevState => !prevState);
+    setIsSearchExpanded(false);
+    setIsNotificationsOpen(false);
+    setIsMessagesOpen(false);
   };
 
   const truncateText = (text, maxLength) => {
