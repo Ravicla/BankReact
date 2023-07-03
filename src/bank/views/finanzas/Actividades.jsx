@@ -1,17 +1,16 @@
 import React, { useState } from 'react';
+import DatePicker from 'react-datepicker';
+import 'react-datepicker/dist/react-datepicker.css';
 
-export const Lista = () => {
-  const [isActive, setIsActive] = useState(false);
+export const Actividades = () => {
 
-  const handleClick = () => {
-    setIsActive(!isActive);
-  };
+  const [selectedDate, setSelectedDate] = useState(null);
 
   return (
     <div className="container-fluid">
       {/* Page Heading */}
       <div className="d-sm-flex align-items-center justify-content-between mb-4">
-        <h1 className="h3 mb-0 text-gray-800">Usuarios</h1>
+        <h1 className="h3 mb-0 text-gray-800">Actividades</h1>
         <a href="#" className="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm">
           <i className="fas fa-download fa-sm text-white-50"></i> Generate Report
         </a>
@@ -35,38 +34,33 @@ export const Lista = () => {
                     <th>Cedula</th>
                     <th>Nombre</th>
                     <th>Apellido</th>
-                    <th>Telefono</th>
-                    <th>Correo</th>
-                    <th>Estado</th>
+                    <th>Fecha</th>
+                    <th>Actividad</th>
                   </tr>
                 </thead>
-                <tfoot>
-                  <tr>
-                    <th>Cedula</th>
-                    <th>Nombre</th>
-                    <th>Apellido</th>
-                    <th>Telefono</th>
-                    <th>Correo</th>
-                    <th>Estado</th>
-                  </tr>
-                </tfoot>
+
                 <tbody>
                   <tr>
                     <td>1234567890</td>
                     <td>Ana</td>
                     <td>Alarcon</td>
-                    <td>0987654321</td>
-                    <td>ana@google.com</td>
                     <td>
-                      <div className="btn-group" role="group" aria-label="Basic outlined example">
-                        <button
-                          type="button"
-                          className={`btn ${isActive ? 'btn-outline-primary' : 'btn-outline-danger'}`}
-                          onClick={handleClick}>
-                          {isActive ? 'Activo' : 'Inactivo'}
-                        </button>
-                      </div>
+                      <DatePicker
+                        selected={selectedDate}
+                        onChange={(date) => setSelectedDate(date)}
+                        placeholderText="Escoge una fecha"
+                        className="form-control"
+                      />
                     </td>
+                    <td>
+                      <select class="form-select" aria-label="Default select example">
+                        <option selected>selecciona tu actividad</option>
+                        <option value="1">Rifa</option>
+                        <option value="2">Comida</option>
+                        <option value="3">Bingo</option>
+                      </select>
+                    </td>
+
                   </tr>
                 </tbody>
               </table>
@@ -84,6 +78,5 @@ export const Lista = () => {
       </div>
     </div>
   );
-};
-
-export default Lista;
+}
+export default Actividades;

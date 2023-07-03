@@ -1,17 +1,19 @@
 import React, { useState } from 'react';
+import DatePicker from 'react-datepicker';
+import 'react-datepicker/dist/react-datepicker.css';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faCalculator, faChartLine, faChartPie, faCoins, faCreditCard, faDollarSign, faExchangeAlt, faFileInvoiceDollar, faHandHoldingUsd, faMoneyBillWave, faMoneyCheckAlt, faPiggyBank, faPlay, faTrophy, faWallet } from '@fortawesome/free-solid-svg-icons';
 
-export const Lista = () => {
-  const [isActive, setIsActive] = useState(false);
 
-  const handleClick = () => {
-    setIsActive(!isActive);
-  };
+export const Prestamos = () => {
+
+  const [selectedDate, setSelectedDate] = useState(null);
 
   return (
     <div className="container-fluid">
       {/* Page Heading */}
       <div className="d-sm-flex align-items-center justify-content-between mb-4">
-        <h1 className="h3 mb-0 text-gray-800">Usuarios</h1>
+        <h1 className="h3 mb-0 text-gray-800">Prestamos</h1>
         <a href="#" className="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm">
           <i className="fas fa-download fa-sm text-white-50"></i> Generate Report
         </a>
@@ -33,40 +35,37 @@ export const Lista = () => {
                 <thead>
                   <tr>
                     <th>Cedula</th>
-                    <th>Nombre</th>
-                    <th>Apellido</th>
-                    <th>Telefono</th>
-                    <th>Correo</th>
-                    <th>Estado</th>
+                    <th>Nombre y Apellido</th>
+                    <th>Fecha del prestamo</th>
+                    <th>valor</th>
+                    <th>tiempo</th>
+                    <th>prestamo</th>
                   </tr>
                 </thead>
-                <tfoot>
-                  <tr>
-                    <th>Cedula</th>
-                    <th>Nombre</th>
-                    <th>Apellido</th>
-                    <th>Telefono</th>
-                    <th>Correo</th>
-                    <th>Estado</th>
-                  </tr>
-                </tfoot>
+
                 <tbody>
                   <tr>
                     <td>1234567890</td>
-                    <td>Ana</td>
-                    <td>Alarcon</td>
-                    <td>0987654321</td>
-                    <td>ana@google.com</td>
+                    <td>Ana Alarcon</td>
+                    <td>
+                      <DatePicker
+                        selected={selectedDate} scrollableMonthYearDropdown
+                        onChange={(date) => setSelectedDate(date)}
+                        placeholderText="Escoge una fecha"
+                        className="form-control"
+                      />
+                    </td>
+                    <td>100</td>
+                    <td>3</td>
                     <td>
                       <div className="btn-group" role="group" aria-label="Basic outlined example">
-                        <button
-                          type="button"
-                          className={`btn ${isActive ? 'btn-outline-primary' : 'btn-outline-danger'}`}
-                          onClick={handleClick}>
-                          {isActive ? 'Activo' : 'Inactivo'}
+                        <button className="btn btn-primary" type="button">
+                          <FontAwesomeIcon icon ={faCalculator} /> Simular
                         </button>
                       </div>
                     </td>
+
+
                   </tr>
                 </tbody>
               </table>
@@ -84,6 +83,5 @@ export const Lista = () => {
       </div>
     </div>
   );
-};
-
-export default Lista;
+}
+export default Prestamos;

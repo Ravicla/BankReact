@@ -18,6 +18,7 @@ export const AppRouter = () => {
       <Route path="/register" element={<RegisterPage />} />
       <Route path="/principal" element={<BankLayout/>} />
 
+
    
       <Route path='/*' element={<Navigate to="/auth/login"/>} />
     </Routes>

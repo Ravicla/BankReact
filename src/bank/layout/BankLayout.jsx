@@ -7,6 +7,8 @@ import { Header } from '../components/Header';
 import '../../assets/vendor/fontawesome-free/css/all.min.css';
 import '../../assets/css/sb-admin-2.min.css';
 import { Lista } from '../views/usuarios/Lista';
+import { Actividades } from '../views/finanzas/Actividades';
+import Prestamos from '../views/finanzas/Prestamos';
 
 export const BankLayout = () => {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
@@ -22,8 +24,9 @@ export const BankLayout = () => {
             <div className="container-fluid">             
               {/* Agrega aquí el contenido adicional que desees mostrar */}
               {/*<HomePage/> */}
-              <Lista />
+              <Prestamos />
               {/*<Lista /> */}
+              {/*<Actividades /> */}
             </div>
           </div>
           <Footer />
