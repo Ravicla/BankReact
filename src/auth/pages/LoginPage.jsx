@@ -18,7 +18,7 @@ export const LoginPage = () => {
 
                 <div className="form-floating mb-3">
                   <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com"/>
-                  <label for="floatingInput">Correop</label>
+                  <label for="floatingInput">Correo</label>
                 </div>
 
                 <div className="form-floating mb-3">

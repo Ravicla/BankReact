@@ -1,7 +1,7 @@
-import React from 'react'
+import { Typography } from '@mui/material'
 
 export const BankPage = () => {
   return (
-    <div>BankPage</div>
+    <Typography variant='h1'>BankPage</Typography>
   )
 }
