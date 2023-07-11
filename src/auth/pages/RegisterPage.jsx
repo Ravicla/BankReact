@@ -1,6 +1,7 @@
 import React from 'react';
 import './LoginPage.css';
 import { Link } from 'react-router-dom';
+import { TextField } from '@mui/material';
 
 
 export const RegisterPage = () => {
@@ -17,38 +18,58 @@ export const RegisterPage = () => {
               <form>
 
                 <div className="form-floating mb-3">
-                  <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com"/>
-                  <label for="floatingInput">Cedula</label>
+                  <TextField
+                    label="Cedula"
+                    type="cedula"
+                    placeholder="0123456789"
+                    fullWidth />
                 </div>
 
                 <div className="form-floating mb-3">
-                  <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com"/>
-                  <label for="floatingInput">Nombre</label>
+                  <TextField
+                    label="Nombre"
+                    type="nombre"
+                    placeholder="Thalia"
+                    fullWidth />
                 </div>
 
                 <div className="form-floating mb-3">
-                  <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com"/>
-                  <label for="floatingInput">Apellido</label>
+                  <TextField
+                    label="Apellido"
+                    type="apellido"
+                    placeholder="Alcivar"
+                    fullWidth />
                 </div>
 
                 <div className="form-floating mb-3">
-                  <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com"/>
-                  <label for="floatingInput">Telefono</label>
+                  <TextField
+                    label="Telefono"
+                    type="telefono"
+                    placeholder="0987654321"
+                    fullWidth />
                 </div>
 
                 <div className="form-floating mb-3">
-                  <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com"/>
-                  <label for="floatingInput">Correo</label>
+                  <TextField
+                    label="Correo"
+                    type="correo"
+                    placeholder="correo@example.com"
+                    fullWidth />
                 </div>
 
                 <div className="form-floating mb-3">
-                  <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com"/>
-                  <label for="floatingInput">Contraseña</label>
+                  <TextField
+                    label="Contraseña"
+                    type="contraseña"
+                    placeholder="*********"
+                    fullWidth />
                 </div>
-
                 <div className="form-floating mb-3">
-                  <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com"/>
-                  <label for="floatingInput">Repetir Contraseña</label>
+                  <TextField
+                    label="Repetir Contraseña"
+                    type="repetir contraseña"
+                    placeholder="*********"
+                    fullWidth />
                 </div>
 
                 <div className="d-grid">

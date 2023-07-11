@@ -1,6 +1,6 @@
-import React from 'react';
 import './LoginPage.css';
 import { Link } from 'react-router-dom';
+import { TextField } from '@mui/material';
 
 export const LoginPage = () => {
   return (
@@ -13,33 +13,45 @@ export const LoginPage = () => {
                 className="img-fluid" alt="Phone image" />
             </div>
             <div className="col-md-7 col-lg-5 col-xl-5 offset-xl-1">
-              
+
               <form>
 
                 <div className="form-floating mb-3">
-                  <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com"/>
-                  <label for="floatingInput">Correo</label>
+                  <TextField
+                    label="Correo"
+                    type="correo"
+                    placeholder="correo@example.com"
+                    fullWidth />
                 </div>
 
                 <div className="form-floating mb-3">
-                  <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com"/>
-                  <label for="floatingInput">Contraseña</label>
+                  <TextField
+                    label="Contraseña"
+                    type="password"
+                    placeholder="********"
+                    fullWidth />
                 </div>
 
-                <div className="d-flex justify-content-around align-items-center mb-4">
-                  <div className="form-check">
-                    <input className="form-check-input" type="checkbox" value="" id="form1Example3" checked />
-                    <label className="form-check-label" htmlFor="form1Example3"> Remember me </label>
+
+
+
+
+                <div className="row">
+                  <div className="col-md-6">
+                    <div className="d-grid">
+                      <button type="submit" className="btn btn-outline-primary">Ingresar</button>
+                    </div>
                   </div>
-                  <a href="#!">Forgot password?</a>
+                  <div className="col-md-6">
+                    <div className="d-grid">
+                      <button type="submit" className="btn btn-outline-primary">Ingresar con Google</button>
+                    </div>
+                  </div>
                 </div>
 
-                <div className="d-grid">
-                  <button type="submit" className="btn btn-primary btn-lg">Ingresar</button>
-                </div>
 
                 <div className="text-center mt-3">
-                  <p>Aun no tienes una cuenta? <Link to="/register">Registrate</Link></p>
+                  <p>Aun no tienes una cuenta? <Link to="/auth/register">Registrate</Link></p>
                 </div>
 
               </form>
