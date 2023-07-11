@@ -6,7 +6,6 @@ export const BankRutes = () => {
     <Routes>
       <Route path="/" element={<BankPage/>} />
       <Route path="/*" element={<Navigate to="/" />} />
-      
     </Routes>
   )
 }

@@ -121,8 +121,7 @@ export const SideBar = () => {
             className={`nav-link collapsed ${isHomeExpanded ? 'active' : ''}`}
             href="#"
             onClick={handleHomeToggle}
-            aria-expanded={isHomeExpanded ? 'true' : 'false'}
-          >
+            aria-expanded={isHomeExpanded ? 'true' : 'false'}>
             <FontAwesomeIcon icon={faHome} />
             <span> Home</span>
           </a>
@@ -273,8 +272,6 @@ export const SideBar = () => {
         <div className="sidebar-card d-none d-lg-flex">
           <p className="text-center mb-2"><strong>SB Admin Pro</strong> is packed with premium features, components, and more! Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis soluta cumque sit magni quas molestias, nulla placeat numquam nisi fugiat, provident harum possimus. Ut beatae iure, quis architecto minima ipsum?</p>
         </div>
-
-        
 
       </ul>
     </div>

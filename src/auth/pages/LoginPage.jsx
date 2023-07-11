@@ -1,4 +1,4 @@
-import './LoginPage.css';
+import '../layout/AuthLayout.css'
 import { Link } from 'react-router-dom';
 import { TextField } from '@mui/material';
 

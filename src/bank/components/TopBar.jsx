@@ -54,15 +54,13 @@ export const TopBar = ({ isSidebarOpen, setIsSidebarOpen }) => {
           onClick={() => {
             console.log('Botón presionado');
             setIsSidebarOpen(prevState => !prevState);
-          }}
-        >
+          }}>
           <FontAwesomeIcon icon={faBars} />
         </button>
 
         {/* Topbar Search */}
         <form
-          className={`d-none d-sm-inline-block form-inline mr-auto ml-md-3 my-2 my-md-0 mw-100 navbar-search ${isSearchExpanded ? 'show' : ''}`}
-        >
+          className={`d-none d-sm-inline-block form-inline mr-auto ml-md-3 my-2 my-md-0 mw-100 navbar-search ${isSearchExpanded ? 'show' : ''}`}>
           <div className="input-group">
             <input
               type="text"
@@ -90,15 +88,13 @@ export const TopBar = ({ isSidebarOpen, setIsSidebarOpen }) => {
               data-toggle="dropdown"
               aria-haspopup="true"
               aria-expanded={isSearchExpanded}
-              onClick={toggleSearch}
-            >
+              onClick={toggleSearch}>
               <FontAwesomeIcon icon={faSearch} />
             </a>
             {/* Dropdown - Messages */}
             <div
               className={`dropdown-menu dropdown-menu-right p-3 shadow animated--grow-in ${isSearchExpanded ? 'show' : ''}`}
-              aria-labelledby="searchDropdown"
-            >
+              aria-labelledby="searchDropdown">
               <form className="form-inline mr-auto w-100 navbar-search">
                 <div className="input-group">
                   <input
@@ -128,8 +124,7 @@ export const TopBar = ({ isSidebarOpen, setIsSidebarOpen }) => {
               data-toggle="dropdown"
               aria-haspopup="true"
               aria-expanded={isNotificationsOpen}
-              onClick={toggleNotifications}
-            >
+              onClick={toggleNotifications}>
               <FontAwesomeIcon icon={faBell} />
               {/* Counter - Notifications */}
               <span className="badge badge-danger badge-counter">3+</span>
@@ -312,16 +307,6 @@ export const TopBar = ({ isSidebarOpen, setIsSidebarOpen }) => {
               </a>
             </div>
           </li>
-
-
-
-
-
-
-
-
-
-
 
         </ul>
       </nav>
