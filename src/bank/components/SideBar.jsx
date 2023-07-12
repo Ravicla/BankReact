@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faChartLine, faCog, faCoins, faHandHoldingUsd, faHome, faLaughWink, faTable, faChevronLeft, faChevronRight } from '@fortawesome/free-solid-svg-icons';
-import { Link } from 'react-router-dom';
+import { Link, Outlet } from 'react-router-dom';
 
 import { HomePage } from '../views/dashboard/HomePage';
 import { Actividades, Prestamos } from '../views/finanzas';
@@ -210,6 +210,7 @@ export const SideBar = () => {
         </div>
 
       </ul>
+      
     </div>
   );
 };

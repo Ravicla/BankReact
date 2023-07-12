@@ -7,7 +7,7 @@ import { Lista } from '../views/usuarios/Lista';
 
 import '../../assets/vendor/fontawesome-free/css/all.min.css';
 import '../../assets/css/sb-admin-2.min.css';
-import { Link, Route, Router, Routes } from 'react-router-dom';
+import { Link, Outlet, Route, Router, Routes } from 'react-router-dom';
 
 export const BankLayout = () => {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
@@ -24,16 +24,9 @@ export const BankLayout = () => {
             <TopBar />
 
             <div className="container-fluid">
-            <Routes>
-                <Route path="/home" element={<HomePage />} />
-                <Route path="/actividades" element={<Actividades />} />
-                <Route path="/prestamos" element={<Prestamos />} />
-                <Route path="/lista" element={<Lista />} />
-                {/* Resto de tus rutas */}
-              </Routes>
-
-              <HomePage />
+              <Outlet/>
             </div>
+            
           </div>
           <Footer />
         </div>
