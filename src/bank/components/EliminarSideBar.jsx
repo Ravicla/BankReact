@@ -1,10 +1,7 @@
 import React, { useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faChartLine, faCog, faCoins, faHandHoldingUsd, faHome, faLaughWink, faTable, faChevronLeft, faChevronRight } from '@fortawesome/free-solid-svg-icons';
+import { faCalendarAlt, faChartArea, faChartLine, faCog, faCoins, faFileAlt, faFolder, faHandHoldingUsd, faHome, faLaughWink, faMoneyBillWave, faPercentage, faTable, faTachometerAlt, faWrench, faChevronLeft, faChevronRight } from '@fortawesome/free-solid-svg-icons';
 import { Link } from 'react-router-dom';
-
-import { HomePage } from '../views/dashboard/HomePage';
-import { Actividades, Prestamos } from '../views/finanzas';
 
 export const SideBar = () => {
   const [isHomeExpanded, setIsHomeExpanded] = useState(false);
@@ -135,8 +132,32 @@ export const SideBar = () => {
 
         <li className="nav-item">
           <Link
+            className={`nav-link collapsed ${isRegistrosExpanded ? 'active' : ''}`}
+            href="#"
+            onClick={handleRegistrosToggle}
+            aria-expanded={isRegistrosExpanded ? 'true' : 'false'}>
+            <FontAwesomeIcon icon={faFileAlt} />
+            <span> Registros</span>
+          </Link>
+          <div
+            className={`collapse ${isRegistrosExpanded ? 'show' : ''}`}
+            id="collapseUtilities3">
+            <div className="bg-white py-2 collapse-inner rounded">
+              <h6 className="collapse-header">Usuarios:</h6>
+              <Link className="collapse-item" href="/utilities-color">
+                Formulario
+              </Link>
+              <Link className="collapse-item" href="/utilities-border">
+                Actalizar Usuario
+              </Link>
+            </div>
+          </div>
+        </li>
+
+        <li className="nav-item">
+          <Link
             className={`nav-link collapsed ${isListaExpanded ? 'active' : ''}`}
-            to="/lista"
+            href="#"
             onClick={handleListaToggle}
             aria-expanded={isListaExpanded ? 'true' : 'false'}>
             <FontAwesomeIcon icon={faTable} />
@@ -144,28 +165,70 @@ export const SideBar = () => {
           </Link>
         </li>
 
+        <li className="nav-item">
+          <Link
+            className={`nav-link collapsed ${isCalendarioExpanded ? 'active' : ''}`}
+            href="#"
+            onClick={handleCalendarioToggle}
+            aria-expanded={isCalendarioExpanded ? 'true' : 'false'}>
+            <FontAwesomeIcon icon={faCalendarAlt} />
+            <span> Calendario</span>
+          </Link>
+        </li>
+
+
         <hr className="sidebar-divider" />
         <div className="sidebar-heading">Finanzas</div>
+
         <li className="nav-item">
           <Link
             className={`nav-link collapsed ${isActividadesExpanded ? 'active' : ''}`}
-            to="/actividades"
+            href="#"
             onClick={handleActividadesToggle}
             aria-expanded={isActividadesExpanded ? 'true' : 'false'}>
             <FontAwesomeIcon icon={faCoins} />
             <span> Actividades</span>
           </Link>
+          <div
+            className={`collapse ${isActividadesExpanded ? 'show' : ''}`}
+            id="collapseUtilities4">
+            <div className="bg-white py-2 collapse-inner rounded">
+              <h6 className="collapse-header">Finanzas:</h6>
+              <Link className="collapse-item" href="/utilities-color">
+                Rifa
+              </Link>
+              <Link className="collapse-item" href="/utilities-border">
+                Comida
+              </Link>
+              <Link className="collapse-item" href="/utilities-border">
+                Lo que sea
+              </Link>
+            </div>
+          </div>
         </li>
 
         <li className="nav-item">
           <Link
             className={`nav-link collapsed ${isPrestamosExpanded ? 'active' : ''}`}
-            to="/prestamos"
+            href="#"
             onClick={handlePrestamosToggle}
             aria-expanded={isPrestamosExpanded ? 'true' : 'false'}>
             <FontAwesomeIcon icon={faHandHoldingUsd} />
             <span> Prestamos</span>
           </Link>
+          <div
+            className={`collapse ${isPrestamosExpanded ? 'show' : ''}`}
+            id="collapseUtilities4">
+            <div className="bg-white py-2 collapse-inner rounded">
+              <h6 className="collapse-header">Finanzas:</h6>
+              <Link className="collapse-item" href="/utilities-color">
+                123
+              </Link>
+              <Link className="collapse-item" href="/utilities-border">
+                Hola
+              </Link>
+            </div>
+          </div>
         </li>
 
 
@@ -205,6 +268,7 @@ export const SideBar = () => {
         </div>
 
         <hr/>
+
         <div className="sidebar-card d-none d-lg-flex">
           <p className="text-center mb-2"><strong>SB Admin Pro</strong> is packed with premium features, components, and more! Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis soluta cumque sit magni quas molestias, nulla placeat numquam nisi fugiat, provident harum possimus. Ut beatae iure, quis architecto minima ipsum?</p>
         </div>
