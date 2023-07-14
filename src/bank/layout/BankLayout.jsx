@@ -3,7 +3,6 @@ import { SideBar, TopBar, Footer, Header } from '../components';
 
 import { HomePage } from '../views/dashboard/HomePage';
 import { Actividades, Prestamos } from '../views/finanzas';
-import { Lista } from '../views/usuarios/Lista';
 
 import '../../assets/vendor/fontawesome-free/css/all.min.css';
 import '../../assets/css/sb-admin-2.min.css';

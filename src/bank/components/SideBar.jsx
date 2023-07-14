@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faChartLine, faCog, faCoins, faHandHoldingUsd, faHome, faLaughWink, faTable, faChevronLeft, faChevronRight } from '@fortawesome/free-solid-svg-icons';
-import { Link, Outlet } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 import { HomePage } from '../views/dashboard/HomePage';
 import { Actividades, Prestamos } from '../views/finanzas';
@@ -136,11 +136,11 @@ export const SideBar = () => {
         <li className="nav-item">
           <Link
             className={`nav-link collapsed ${isListaExpanded ? 'active' : ''}`}
-            to="/lista"
+            to="/usuarios"
             onClick={handleListaToggle}
             aria-expanded={isListaExpanded ? 'true' : 'false'}>
             <FontAwesomeIcon icon={faTable} />
-            <span> Lista</span>
+            <span> Usuarios</span>
           </Link>
         </li>
 
